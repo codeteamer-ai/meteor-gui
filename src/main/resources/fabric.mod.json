@@ -1,0 +1,26 @@
+{
+    "schemaVersion": 1,
+    "id": "meteor-gui",
+    "version": "${version}",
+    "name": "Meteor GUI",
+    "description": "A Meteor Client-style Click GUI with modules, smooth animations and custom sounds.",
+    "authors": ["MeteorUI"],
+    "contact": {},
+    "license": "MIT",
+    "icon": "assets/meteor-gui/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": ["com.meteorui.MeteorGui"],
+        "client": ["com.meteorui.client.MeteorGuiClient"]
+    },
+    "mixins": [
+        "meteor-gui.mixins.json",
+        { "config": "meteor-gui.client.mixins.json", "environment": "client" }
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.0",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
